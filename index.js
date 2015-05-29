@@ -70,7 +70,6 @@ app.get('/getStats', function(req, res){
       .innerJoin('fieldsOfStudy', 'eduMilestones.fieldOfStudy_id', 'fieldsOfStudy.id')
       .where({position_id: positionID})
       .then(function(data){
-
         var forEach = function(){
           var list = arguments[0];
           for(var i=0; i<list.length; i++){

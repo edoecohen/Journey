@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="journeyApp">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Journey</title>
+  <style>
+    ul {
+      list-style: none;
+    }
+    .name {
+      margin-left: 40px;
+    }
+  </style>
 </head>
-<body>
-  <h1>Test Page</h1>
+<body ng-controller='mainCtrl'>
+
+  <h1 ng-click='goHome()'>Journey</h1>
+  <div ui-view></div>
+
+  <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="./bower_components/angular/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="./views/app.js"></script>
+  <script type="text/javascript" src="./views/statsFactory.js"></script>
+  <script type="text/javascript" src="./views/homeCtrl.js"></script>
+  <script type="text/javascript" src="./views/mainCtrl.js"></script>
+  <script type="text/javascript" src="./views/positionCtrl.js"></script>
+
 </body>
 </html>
