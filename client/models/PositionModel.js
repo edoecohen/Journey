@@ -23,8 +23,8 @@ var PositionModel = Backbone.Model.extend({
     this.set('degrees', response.degrees);
     this.set('fieldsOfStudy', response.fieldsOfStudy);
 
-
-    clientRouter.viewJourney(this);
+    clientRouter.navigate("/viewJourney/" + 13  , true )
+    // clientRouter.viewJourney(this);
 
     return response;
   },
