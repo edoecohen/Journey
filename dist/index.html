@@ -22,8 +22,9 @@
         <h1>Journey</h1>
         <h2>What position are you considering?</h2>
         <form>
-          <input placeholder='e.g. Software engineer' autocomplete='on'>
+          <input id='mainSearch' placeholder='e.g. Software engineer'>
         </form>
+        <div id='container' style='border:1px solid #999;'></div>
       </div>
     </div>
 
@@ -62,6 +63,7 @@
 	<script src="jquery.min.js"></script>
 	<script src="underscore-min.js"></script>
 	<script src="backbone-min.js"></script>
+  <script src="completely.min.js"></script>
 
   <!-- ALL OUR JS IN ONE FILE -->
   <script src="all.min.js"></script>
@@ -93,8 +95,34 @@
         $( ".onePath" ).click(function(e) {
           appView.discoverPathsView.journeyClickHandler(e);
 				});
+        
+        var auto = completely(document.getElementById('container'), {
+          fontSize : '24px',
+          fontFamily : 'Arial',
+          color:'black',
+        });
+        auto.options = ['software engineer', 'entertainment lawyer'];
+
+        // var getPositionNames = function(obj) {
+        //   for(var key in obj) {
+        //     auto.options.push(obj[key]['position_name']);
+        //   }
+        // };
+        // getPositionNames(app.attributes);
+        console.log('auto options', app.attributes);
+        
+        auto.repaint(); 
+
+
+        setTimeout(function() {
+          auto.input.focus();
+        },0);
+
+
+        console.log('app has all this!', app);
 
       });
+
 
     </script>
 

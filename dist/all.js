@@ -1,3 +1,4 @@
+
 window.PositionModel = Backbone.Model.extend({
 
 	url: '/api/queryPositions/getStats',
@@ -15,8 +16,6 @@ window.PositionModel = Backbone.Model.extend({
     this.set('degreesAndFields', response.degreesAndFields);
 
     clientRouter.viewJourney(this);
-
-    // clientRouter.navigate("/viewJourney/" + 13  , true )
 
     return response;
   }
@@ -307,17 +306,15 @@ window.ClientRouter = Backbone.Router.extend ({
 
     routes: {
         '' : 'home',
-        // 'viewJourney': 'viewJourney',
-    'viewJourney/:id': 'viewJourney'
+        'viewJourney': 'viewJourney'
     },
 
     home: function () {
-    console.log('in home view - called from router');
-        // var appView = new AppView();
-        // $(".mainContent").html(appView.el);
+        console.log('in home view - called from router');
+        var appView = new AppView();
+        $(".mainContent").html(appView.el);
 
     },
-
 
     viewJourney: function(model) {
         console.log('got to viewJourney on clientRouter');
