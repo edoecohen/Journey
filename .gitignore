@@ -3,7 +3,6 @@
 node_modules/
 
 client/bower_components/
-
 bower_components/
 
 # Runtime data
@@ -17,6 +16,6 @@ logs
 
 #compiled dirs
 build/
-dist/
 
 test*.js
+

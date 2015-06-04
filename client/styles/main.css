@@ -1,5 +1,5 @@
 html {
-  background: url(../assets/bg.jpg) no-repeat center center fixed;
+  background: url(../assets/bg-blue.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -16,7 +16,8 @@ body {
   text-align: center; }
   .splashPage h1 {
     font-family: "Galdeano", sans-serif;
-    font-size: 12em; }
+    font-size: 12em;
+    color: white;}
   .splashPage h2 {
     font-size: 2em;
     text-align: center;
@@ -66,5 +67,26 @@ body {
     cursor: pointer; }
   .onePath h3:hover {
     cursor: pointer; }
+
+/*
+td {
+  font: Helvetica;
+  size: 35px;
+  color: white;
+}*/
+
+table, th, td {
+  font: Helvetica;
+  font-size: 20px;
+  color: white;
+}
+
+table {
+  width: 50%;
+}
+
+th {
+  height: 100px;
+}
 
 /*# sourceMappingURL=main.css.map */

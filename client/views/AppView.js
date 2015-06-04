@@ -1,17 +1,43 @@
 // AppView.js - Defines a backbone view class for the whole
-var AppView = Backbone.View.extend({
+window.AppView = Backbone.View.extend({
 
 	initialize: function(params) {
-		this.positionView = new PositionView({model: this.model.get('positionModel')});
-		this.positionsCollectionView = new PositionsCollectionView({collection: this.model.get('positionsCollection')});
+
+		// this.searchPositionsBox = new PositionSearchBoxView({searchField: 'position_name', collection: this.model.get('positionsCollection')});
+
+		// var context = this;
+		// this.listenTo(this.model, 'positionsReceived', function() {
+		// 	context.positionsCollectionView =
+		// 							new PositionsCollectionView({collection: this.model.get('positionsCollection')});
+		// 	context.render();
+		// 	});
+
+		// this.render();
+
+		this.discoverPathsView = new DiscoverPathsView({collection: this.model.get('discoverPathsCollection')});
 		this.render();
+
+
 	},
 
 	render: function(){
-		return this.$el.html([
-			'<h3>Choose a destination</h3>',
-			this.positionsCollectionView.$el
-		]);
-	}
 
-})
+		// this.$el.children().detach();
+
+		// if (this.positionsCollectionView) {
+		// 	return this.$el.append([
+		// 		'<h3>Choose a destination</h3>', this.positionsCollectionView.$el
+		// 	]);
+		// }
+		// return this.$el.append([
+		// 	'<h3>Choose a destination</h3>'
+		// ]);
+
+		// this.$el.children().detach();
+
+
+		return this.$el.append(this.discoverPathsView.$el);
+
+
+	}
+});

@@ -1,33 +1,24 @@
-var PositionModel = Backbone.Model.extend({
 
-	url: '/api/positionQuery/getStats',
+window.PositionModel = Backbone.Model.extend({
 
-	defaults: {
-		title: null,
-		degrees: null,
-		FOS: null
-	},
-
+	url: '/api/queryPositions/getStats',
 
 	goToJourney: function(journeyClicked){
 
-		console.log(this.fetch({data: $.param({name: journeyClicked})}));
+		this.fetch({data: $.param({name: journeyClicked})});
 
   },
 
 	parse: function(response) {
 
-    console.log('RESPONSE', response);
-    console.log("THIS MODEL", this);
-
     this.set('degrees', response.degrees);
     this.set('fieldsOfStudy', response.fieldsOfStudy);
+    this.set('degreesAndFields', response.degreesAndFields);
 
-    clientRouter.navigate("/viewJourney/" + 13  , true )
-    // clientRouter.viewJourney(this);
+    clientRouter.viewJourney(this);
 
     return response;
-  },
+  }
 
 });
 
