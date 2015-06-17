@@ -39,7 +39,7 @@ button:focus, .btn:focus {outline:0;}
     display: none; 
 }
 .splashBack{
-  background: url(../assets/bg-fastroad2.jpg) no-repeat center center fixed;
+  background: url(../assets/supermanbg.jpg) no-repeat center center fixed;
   height:100vh;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -48,21 +48,21 @@ button:focus, .btn:focus {outline:0;}
 }
 .splashPage {
   color: white;
-  text-align: center; }
+  text-align: left; }
   .splashPage h1 {
     font-family: 'Expletus Sans', cursive;
     font-weight: 400;
     font-size: 12em;
     color: white;
-    margin-top: 100px;
+    margin-top: 0;
     }
   .splashPage h2 {
     font-size: 2.5em;
-    text-align: center;
-    margin: 50px 0 20px; }
+    text-align: left;
+    margin: 15px 0 20px; }
   .splashPage input {
     background: none;
-    width: 78%;
+    width: 61%;
     border: 1px solid #FFF;
     padding: 15px 20px;
     font-size: 1.8em;

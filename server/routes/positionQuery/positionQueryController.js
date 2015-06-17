@@ -166,10 +166,7 @@ module.exports = {
           var getExperienceStatsAsync = Promise.promisify(recordExperienceStats);
           var getSkillStatsAsync      = Promise.promisify(recordSkillStats);
 
-
           getEducationStatsAsync().then(function() {
-
-            // result[subject].positionsSummary[positionName] = positionID;
             return getExperienceStatsAsync()
           })
           .then(function() {
